@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Textile Trends - Nova Haven</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div id="logo">NOVA HAVEN</div>
+        <ul id="navbar">
+            <li><a href="index.html">HOME</a></li>
+            <li class="dropdown-toggle">SHOP
+                <div class="dropdown">
+                    <ul>
+                        <li><a href="stationery.html">STATIONERY & OFFICE SUPPLIES</a></li>
+                        <li><a href="household.html">HOUSEHOLD ITEMS</a></li>
+                        <li><a href="personalcare.html">PERSONAL CARE</a></li>
+                        <li><a href="packaging.html">PACKAGING & STORAGE</a></li>
+                        <li><a href="groceries.html">GROCERIES</a></li>
+                        <li><a href="clothing.html">CLOTHING & TEXTILES</a></li>
+                        <li><a href="gardening.html">GARDENING & FARMING</a></li>
+                        <li><a href="handicrafts.html">RURAL DECORS</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <form id="search-form" class="search-form">
+                    <input type="text" id="search-input" placeholder="Search products..." />
+                    <button type="submit" class="search-icon">🔍</button>
+                </form>
+                <div id="search-results" class="search-results"></div>
+            </li>
+            <li><a href="cart.html" class="cart-icon">🛒 <span id="cart-count">0</span></a></li>
+            <li><a href="login.html" id="login-link">LOGIN</a></li>
+            <li class="hamburger-toggle"><a href="#" class="hamburger-icon">☰</a>
+                <div class="hamburger-menu">
+                    <ul>
+                        <li><a href="clever-finds.html">CLEVER FINDS</a></li>
+                        <li><a href="sustainability.html">SUSTAINABILITY</a></li>
+                        <li><a href="about.html">ABOUT US</a></li>
+                        <li><a href="contactus.html">CONTACT US</a></li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </header>
+
+    <div id="buyrent-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">×</span>
+            <h2 id="modal-title">Complete Your Order</h2>
+            <form id="buyrent-form">
+                <div class="form-group">
+                    <label for="order-name">Name</label>
+                    <input type="text" id="order-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="order-email">Email</label>
+                    <input type="email" id="order-email" required>
+                </div>
+                <div class="form-group">
+                    <label for="order-phone">Phone</label>
+                    <input type="tel" id="order-phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="order-address">Address</label>
+                    <textarea id="order-address" required></textarea>
+                </div>
+                <p id="order-error" class="error"></p>
+                <button type="submit">Submit Order</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="section1" class="row-section">
+        <h2>Textile Trends</h2>
+        <p>Sustainable style for every wardrobe.</p>
+        <div class="product-grid">
+            <div class="product">
+                <div class="product-image" style="background-image: url('tote-bag.jpg');"></div>
+                <div class="product-content">
+                    <h3>Organic Cotton Tote Bag</h3>
+                    <p>Stylish, durable carry-all for shopping or work.</p>
+                    <p><span style="color: red;">-20%</span> ₹499 <del>₹625</del></p>
+                    <p>🌱 Organic</p>
+                    <div class="action-buttons">
+                        <button class="cart-btn" data-product="Organic Cotton Tote Bag" data-price="499">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product">
+                <div class="product-image" style="background-image: url('scarf.jpg');"></div>
+                <div class="product-content">
+                    <h3>Bamboo Fiber Scarf</h3>
+                    <p>Soft, breathable accessory for all seasons.</p>
+                    <p><span style="color: red;">-25%</span> ₹399 <del>₹529</del></p>
+                    <p>🌱 Sustainable</p>
+                    <div class="action-buttons">
+                        <button class="cart-btn" data-product="Bamboo Fiber Scarf" data-price="399">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product">
+                <div class="product-image" style="background-image: url('shirt.jpg');"></div>
+                <div class="product-content">
+                    <h3>Hemp Blend Shirt</h3>
+                    <p>Casual, breathable shirt for daily wear.</p>
+                    <p><span style="color: red;">-22%</span> ₹999 <del>₹1289</del></p>
+                    <p>🌱 Eco-friendly</p>
+                    <div class="action-buttons">
+                        <button class="cart-btn" data-product="Hemp Blend Shirt" data-price="999">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product">
+                <div class="product-image" style="background-image: url('socks.jpg');"></div>
+                <div class="product-content">
+                    <h3>Recycled Polyester Socks</h3>
+                    <p>Comfortable, durable socks for everyday use.</p>
+                    <p><span style="color: red;">-20%</span> ₹199 <del>₹249</del></p>
+                    <p>🌱 Recycled</p>
+                    <div class="action-buttons">
+                        <button class="cart-btn" data-product="Recycled Polyester Socks" data-price="199">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product">
+                <div class="product-image" style="background-image: url('bedspread.jpg');"></div>
+                <div class="product-content">
+                    <h3>Organic Cotton Bedspread</h3>
+                    <p>Soft, eco-friendly bedding for cozy nights.</p>
+                    <p><span style="color: red;">-25%</span> ₹1499 <del>₹1999</del></p>
+                    <p>🌱 Organic</p>
+                    <div class="action-buttons">
+                        <button class="cart-btn" data-product="Organic Cotton Bedspread" data-price="1499">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product">
+                <div class="product-image" style="background-image: url('curtains.jpg');"></div>
+                <div class="product-content">
+                    <h3>Linen Blackout Curtains</h3>
+                    <p>Energy-saving curtains for better sleep.</p>
+                    <p><span style="color: red;">-28%</span> ₹1299 <del>₹1799</del></p>
+                    <p>🌱 Sustainable</p>
+                    <div class="action-buttons">
+                        <button class="cart-btn" data-product="Linen Blackout Curtains" data-price="1299">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product">
+                <div class="product-image" style="background-image: url('towel-set.jpg');"></div>
+                <div class="product-content">
+                    <h3>Bamboo Towel Set</h3>
+                    <p>Soft, absorbent towels for eco-conscious bathrooms.</p>
+                    <p><span style="color: red;">-25%</span> ₹799 <del>₹1069</del></p>
+                    <p>🌱 Sustainable</p>
+                    <div class="action-buttons">
+                        <button class="cart-btn" data-product="Bamboo Towel Set" data-price="799">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product">
+                <div class="product-image" style="background-image: url('apron.jpg');"></div>
+                <div class="product-content">
+                    <h3>Recycled Denim Apron</h3>
+                    <p>Durable, stylish apron for cooking or crafting.</p>
+                    <p><span style="color: red;">-22%</span> ₹599 <del>₹769</del></p>
+                    <p>🌱 Recycled</p>
+                    <div class="action-buttons">
+                        <button class="cart-btn" data-product="Recycled Denim Apron" data-price="599">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="see-more">See More</a>
+    </div>
+
+  <footer>
+    <div class="footer_panel1">
+      <a href="#top" style="color:antiquewhite">Back to Top</a>
+    </div>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Shop</h3>
+        <ul>
+          <li><a href="stationery.html">Desk Smarts</a></li>
+          <li><a href="household.html">Smarter Living</a></li>
+          <li><a href="handicrafts.html">Rural Decors</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Support</h3>
+        <ul>
+          <li><a href="contactus.html">Contact Us</a></li>
+          <li><a href="returns.html">Returns</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Community</h3>
+        <ul>
+          <li><a href="journal.html">SmartHome Journal</a></li>
+          <li><a href="sustainability.html">Sustainability</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Contact Us</h3>
+        <p>Email: <a href="mailto:support@novahaven.com">support@novahaven.com</a></p>
+        <p>Phone: +1 (555) 123-4567</p>
+      </div>
+    </div>
+    <div class="footer_panel2">
+      THANK YOU FOR SHOPPING WITH US.<br><br>
+      We can't wait to deliver happiness to your doorstep!<br><br>
+      © 2025 Nova Haven. All rights reserved
+    </div>
+  </footer>
+    <script src="script.js"></script>
+</body>
+</html>

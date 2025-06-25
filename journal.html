@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartHome Journal - Nova Haven</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+    <div id="logo">NOVA HAVEN</div>
+    <ul id="navbar">
+      <li><a href="index.html">HOME</a></li>
+      <li class="dropdown-toggle">SHOP
+        <div class="dropdown">
+          <ul>
+            <li><a href="stationery.html">STATIONERY & OFFICE SUPPLIES</a></li>
+            <li><a href="household.html">HOUSEHOLD ITEMS</a></li>
+            <li><a href="personalcare.html">PERSONAL CARE</a></li>
+            <li><a href="packaging.html">PACKAGING & STORAGE</a></li>
+            <li><a href="groceries.html">GROCERIES</a></li>
+            <li><a href="clothing.html">CLOTHING & TEXTILES</a></li>
+            <li><a href="gardening.html">GARDENING & FARMING</a></li>
+            <li><a href="handicrafts.html">RURAL DECORS</a></li>
+          </ul>
+        </div>
+      </li>
+      <li>
+        <form id="search-form" class="search-form">
+          <input type="text" id="search-input" placeholder="Search products..." aria-label="Search products">
+          <button type="submit" class="search-icon" aria-label="Search">🔍</button>
+        </form>
+        <div id="search-results" class="search-results"></div>
+      </li>
+      <li><a href="cart.html" class="cart-icon">🛒 <span id="cart-count">0</span></a></li>
+      <li><a href="login.html" id="login-link">LOGIN</a></li>
+      <li class="hamburger-toggle">
+        <a href="#" class="hamburger-icon" aria-label="Menu">☰</a>
+        <div class="hamburger-menu">
+          <ul>
+            <li><a href="clever-finds.html">CLEVER FINDS</a></li>
+            <li><a href="sustainability.html">SUSTAINABILITY</a></li>
+            <li><a href="video-section.html">TIME-SAVERS</a></li>
+            <li><a href="about.html">ABOUT US</a></li>
+            <li><a href="contactus.html">CONTACT US</a></li>
+          </ul>
+        </div>
+      </li>
+    </ul>
+  </header>
+
+    <div id="section1" style="background-color: #e4d6bd; padding: 20px; text-align: center;">
+        <h2 style="background-color: #e4d6bd;">SmartHome Journal</h2>
+        <p style="background-color: #e4d6bd; margin: 20px;">Share and discuss your experiences with Nova Haven products!</p>
+        <form id="journal-form" style="background-color: whitesmoke; max-width: 500px; margin: 20px auto; padding: 20px; border: 2px solid black;">
+            <div class="form-group">
+                <label for="journal-comment">Your Comment</label>
+                <textarea id="journal-comment" placeholder="Share your thoughts" required></textarea>
+            </div>
+            <p class="error" id="journal-error"></p>
+            <button type="submit">Post Comment</button>
+        </form>
+        <div id="journal-posts" style="background-color: whitesmoke; max-width: 600px; margin: 20px auto; padding: 20px;"></div>
+    </div>
+
+  <footer>
+    <div class="footer_panel1">
+      <a href="#top" style="color:antiquewhite">Back to Top</a>
+    </div>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Shop</h3>
+        <ul>
+          <li><a href="stationery.html">Desk Smarts</a></li>
+          <li><a href="household.html">Smarter Living</a></li>
+          <li><a href="handicrafts.html">Rural Decors</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Support</h3>
+        <ul>
+          <li><a href="contactus.html">Contact Us</a></li>
+          <li><a href="returns.html">Returns</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Community</h3>
+        <ul>
+          <li><a href="journal.html">SmartHome Journal</a></li>
+          <li><a href="sustainability.html">Sustainability</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Contact Us</h3>
+        <p>Email: <a href="mailto:support@novahaven.com">support@novahaven.com</a></p>
+        <p>Phone: +1 (555) 123-4567</p>
+      </div>
+    </div>
+    <div class="footer_panel2">
+      THANK YOU FOR SHOPPING WITH US.<br><br>
+      We can't wait to deliver happiness to your doorstep!<br><br>
+      © 2025 Nova Haven. All rights reserved
+    </div>
+  </footer>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Green Grooming - Nova Haven</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="canonical" href="https://yourdomain.com/personalcare.html">
+</head>
+<body>
+     <header>
+        <div id="logo">NOVA HAVEN</div>
+        <ul id="navbar">
+            <li><a href="index.html">HOME</a></li>
+            <li class="dropdown-toggle">SHOP
+                <div class="dropdown">
+                    <ul>
+                        <li><a href="stationery.html">STATIONERY & OFFICE SUPPLIES</a></li>
+                        <li><a href="household.html">HOUSEHOLD ITEMS</a></li>
+                        <li><a href="personalcare.html">PERSONAL CARE</a></li>
+                        <li><a href="packaging.html">PACKAGING & STORAGE</a></li>
+                        <li><a href="groceries.html">GROCERIES</a></li>
+                        <li><a href="clothing.html">CLOTHING & TEXTILES</a></li>
+                        <li><a href="gardening.html">GARDENING & FARMING</a></li>
+                        <li><a href="handicrafts.html">RURAL DECORS</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <form id="search-form" class="search-form">
+                    <input type="text" id="search-input" placeholder="Search products..." />
+                    <button type="submit" class="search-icon">🔍</button>
+                </form>
+                <div id="search-results" class="search-results"></div>
+            </li>
+            <li><a href="cart.html" class="cart-icon">🛒 <span id="cart-count">0</span></a></li>
+            <li><a href="login.html" id="login-link">LOGIN</a></li>
+            <li class="hamburger-toggle"><a href="#" class="hamburger-icon">☰</a>
+                <div class="hamburger-menu">
+                    <ul>
+                        <li><a href="clever-finds.html">CLEVER FINDS</a></li>
+                        <li><a href="sustainability.html">SUSTAINABILITY</a></li>
+                        <li><a href="about.html">ABOUT US</a></li>
+                        <li><a href="contactus.html">CONTACT US</a></li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </header>
+
+    <div id="buyrent-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">×</span>
+            <h2 id="modal-title">Complete Your Order</h2>
+            <form id="buyrent-form">
+                <div class="form-group">
+                    <label for="order-name">Name</label>
+                    <input type="text" id="order-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="order-email">Email</label>
+                    <input type="email" id="order-email" required>
+                </div>
+                <div class="form-group">
+                    <label for="order-phone">Phone</label>
+                    <input type="text" id="order-phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="order-address">Address</label>
+                    <textarea id="order-address" required></textarea>
+                </div>
+                <p id="order-error" class="error"></p>
+                <button type="submit">Submit Order</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="section1" class="row-section">
+        <h2>Green Grooming</h2>
+        <p>Eco-conscious personal care essentials.</p>
+        <div class="mood-filter">
+            <label for="mood-select">Filter by:</label>
+            <select id="mood-select">
+                <option value="all">All</option>
+                <option value="biodegradable">Biodegradable</option>
+                <option value="organic">Organic</option>
+                <option value="plastic-free">Plastic-free</option>
+                <option value="reusable">Reusable</option>
+                <option value="natural">Natural</option>
+            </select>
+        </div>
+        <div class="product-grid">
+            <div class="product" data-filter="biodegradable">
+                <div class="product-image" style="background-image: url('personalcare1.jpeg');"></div>
+                <div class="product-content">
+                    <h3>Bamboo Toothbrush</h3>
+                    <p>Eco-friendly brushing with soft bristles.</p>
+                    <p><span style="color: red;">-20%</span> ₹99 <del>₹125</del></p>
+                    <p>🌱 Biodegradable</p>
+                    <div class="action-buttons">
+                        <button class="cart-btn" data-product="Bamboo Toothbrush" data-price="99">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product" data-filter="organic">
+                <div class="product-image" style="background-image: url('personalcare2.jpeg');"></div>
+                <div class="product-content">
+                    <h3>Organic Soap Bar</h3>
+                    <p>Gentle, natural cleansing for sensitive skin.</p>
+                    <p><span style="color: red;">-25%</span> ₹199 <del>₹265</del></p>
+                    <p>🌱 Organic</p>
+                    <div class="action-buttons">
+                        <button class="cart-btn" data-product="Organic Soap Bar" data-price="199">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product" data-filter="plastic-free">
+                <div class="product-image" style="background-image: url('personalcare3.jpeg');"></div>
+                <div class="product-content">
+                    <h3>Solid Shampoo Bar</h3>
+                    <p>Long-lasting, travel-friendly hair care.</p>
+                    <p><span style="color: red;">-22%</span> ₹299 <del>₹385</del></p>
+                    <p>🌱 Plastic-free</p>
+                    <div class="action-buttons">
+                        <button class="cart-btn" data-product="Solid Shampoo Bar" data-price="299">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product" data-filter="natural">
+                <div class="product-image" style="background-image: url('personalcare4.jpeg');"></div>
+                <div class="product-content">
+                    <h3>Natural Deodorant Stick</h3>
+                    <p>All-day odor protection without chemicals.</p>
+                    <p><span style="color: red;">-20%</span> ₹249 <del>₹311</del></p>
+                    <p>🌱 Aluminum-free</p>
+                    <div class="action-buttons">
+                        <button class="cart-btn" data-product="Natural Deodorant Stick" data-price="249">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product" data-filter="reusable">
+                <div class="product-image" style="background-image: url('personalcare5.jpeg');"></div>
+                <div class="product-content">
+                    <h3>Stainless Steel Safety Razor</h3>
+                    <p>Close shave with replaceable blades.</p>
+                    <p><span style="color: red;">-25%</span> ₹499 <del>₹665</del></p>
+                    <p>🌱 Reusable</p>
+                    <div class="action-buttons">
+                        <button class="cart-btn" data-product="Stainless Steel Safety Razor" data-price="499">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product" data-filter="plastic-free">
+                <div class="product-image" style="background-image: url('personalcare6.jpeg');"></div>
+                <div class="product-content">
+                    <h3>Shea Butter Lotion Bar</h3>
+                    <p>Moisturizes dry skin without packaging waste.</p>
+                    <p><span style="color: red;">-22%</span> ₹299 <del>₹385</del></p>
+                    <p>🌱 Plastic-free</p>
+                    <div class="action-buttons">
+                        <button class="cart-btn" data-product="Shea Butter Lotion Bar" data-price="299">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product" data-filter="natural">
+                <div class="product-image" style="background-image: url('personalcare7.jpeg');"></div>
+                <div class="product-content">
+                    <h3>Beeswax Lip Balm</h3>
+                    <p>Hydrates lips with eco-friendly ingredients.</p>
+                    <p><span style="color: red;">-20%</span> ₹149 <del>₹186</del></p>
+                    <p>🌱 Natural</p>
+                    <div class="action-buttons">
+                        <button class="cart-btn" data-product="Beeswax Lip Balm" data-price="149">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="see-more">See More</a>
+    </div>
+
+  <footer>
+    <div class="footer_panel1">
+      <a href="#top" style="color:antiquewhite">Back to Top</a>
+    </div>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Shop</h3>
+        <ul>
+          <li><a href="stationery.html">Desk Smarts</a></li>
+          <li><a href="household.html">Smarter Living</a></li>
+          <li><a href="handicrafts.html">Rural Decors</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Support</h3>
+        <ul>
+          <li><a href="contactus.html">Contact Us</a></li>
+          <li><a href="returns.html">Returns</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Community</h3>
+        <ul>
+          <li><a href="journal.html">SmartHome Journal</a></li>
+          <li><a href="sustainability.html">Sustainability</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Contact Us</h3>
+        <p>Email: <a href="mailto:support@novahaven.com">support@novahaven.com</a></p>
+        <p>Phone: +1 (555) 123-4567</p>
+      </div>
+    </div>
+    <div class="footer_panel2">
+      THANK YOU FOR SHOPPING WITH US.<br><br>
+      We can't wait to deliver happiness to your doorstep!<br><br>
+      © 2025 Nova Haven. All rights reserved
+    </div>
+  </footer>
+    <script src="script.js"></script>
+</body>
+</html>

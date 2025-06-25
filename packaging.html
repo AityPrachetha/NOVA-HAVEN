@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pack Smart - Nova Haven</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="canonical" href="https://yourdomain.com/packaging.html">
+</head>
+<body>
+    <header>
+        <div id="logo">NOVA HAVEN</div>
+        <ul id="navbar">
+            <li><a href="index.html">HOME</a></li>
+            <li class="dropdown-toggle">SHOP
+                <div class="dropdown">
+                    <ul>
+                        <li><a href="stationery.html">STATIONERY & OFFICE SUPPLIES</a></li>
+                        <li><a href="household.html">HOUSEHOLD ITEMS</a></li>
+                        <li><a href="personalcare.html">PERSONAL CARE</a></li>
+                        <li><a href="packaging.html">PACKAGING & STORAGE</a></li>
+                        <li><a href="groceries.html">GROCERIES</a></li>
+                        <li><a href="clothing.html">CLOTHING & TEXTILES</a></li>
+                        <li><a href="gardening.html">GARDENING & FARMING</a></li>
+                        <li><a href="handicrafts.html">RURAL DECORS</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <form id="search-form" class="search-form">
+                    <input type="text" id="search-input" placeholder="Search products..." />
+                    <button type="submit" class="search-icon">🔍</button>
+                </form>
+                <div id="search-results" class="search-results"></div>
+            </li>
+            <li><a href="cart.html" class="cart-icon">🛒 <span id="cart-count">0</span></a></li>
+            <li><a href="login.html" id="login-link">LOGIN</a></li>
+            <li class="hamburger-toggle"><a href="#" class="hamburger-icon">☰</a>
+                <div class="hamburger-menu">
+                    <ul>
+                        <li><a href="clever-finds.html">CLEVER FINDS</a></li>
+                        <li><a href="sustainability.html">SUSTAINABILITY</a></li>
+                        <li><a href="about.html">ABOUT US</a></li>
+                        <li><a href="contactus.html">CONTACT US</a></li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </header>
+
+    <div id="buyrent-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">×</span>
+            <h2 id="modal-title">Complete Your Order</h2>
+            <form id="buyrent-form">
+                <div class="form-group">
+                    <label for="order-name">Name</label>
+                    <input type="text" id="order-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="order-email">Email</label>
+                    <input type="email" id="order-email" required>
+                </div>
+                <div class="form-group">
+                    <label for="order-phone">Phone</label>
+                    <input type="text" id="order-phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="order-address">Address</label>
+                    <textarea id="order-address" required></textarea>
+                </div>
+                <p id="order-error" class="error"></p>
+                <button type="submit">Submit Order</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="section1" class="row-section">
+        <h2>Pack Smart</h2>
+        <p>Organize with sustainable storage solutions.</p>
+        <div class="mood-filter">
+            <label for="mood-select">Filter by:</label>
+            <select id="mood-select">
+                <option value="all">All</option>
+                <option value="sustainable">Sustainable</option>
+                <option value="reusable">Reusable</option>
+            </select>
+        </div>
+        <div class="product-grid">
+            <div class="product" data-filter="sustainable">
+                <div class="product-image" style="background-image: url('packaging1.jpg');"></div>
+                <div class="product-content">
+                    <h3>Stackable Bamboo Storage Boxes</h3>
+                    <p>Modular storage for closets or shelves.</p>
+                    <p><span style="color: red;">-25%</span> ₹799 <del>₹1069</del></p>
+                    <p>🌱 Sustainable</p>
+                    <div class="action-buttons">
+                        <button class="cart-btn" data-product="Stackable Bamboo Storage Boxes" data-price="799">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product" data-filter="reusable">
+                <div class="product-image" style="background-image: url('packaging2.jpg');"></div>
+                <div class="product-content">
+                    <h3>Reusable Vacuum Storage Bags</h3>
+                    <p>Compress clothes for travel or storage.</p>
+                    <p><span style="color: red;">-20%</span> ₹599 <del>₹749</del></p>
+                    <p>🌱 Reusable</p>
+                    <div class="action-buttons">
+                        <button class="cart-btn" data-product="Reusable Vacuum Storage Bags" data-price="599">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product" data-filter="reusable">
+                <div class="product-image" style="background-image: url('packaging3.jpg');"></div>
+                <div class="product-content">
+                    <h3>Wall-Mounted Cereal Dispenser</h3>
+                    <p>Easy dispensing for pantry organization.</p>
+                    <p><span style="color: red;">-22%</span> ₹999 <del>₹1282</del></p>
+                    <p>🌱 Reusable</p>
+                    <div class="action-buttons">
+                        <button class="cart-btn" data-product="Wall-Mounted Cereal Dispenser" data-price="999">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product" data-filter="reusable">
+                <div class="product-image" style="background-image: url('packaging4.jpg');"></div>
+                <div class="product-content">
+                    <h3>Magnetic Cable Organizer</h3>
+                    <p>Keeps cords tangle-free on desks.</p>
+                    <p><span style="color: red;">-20%</span> ₹399 <del>₹499</del></p>
+                    <p>🌱 Reusable</p>
+                    <div class="action-buttons">
+                        <button class="cart-btn" data-product="Magnetic Cable Organizer" data-price="399">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product" data-filter="sustainable">
+                <div class="product-image" style="background-image: url('packaging5.jpg');"></div>
+                <div class="product-content">
+                    <h3>Foldable Shoe Rack</h3>
+                    <p>Compact shoe organization for entryways.</p>
+                    <p><span style="color: red;">-25%</span> ₹799 <del>₹1069</del></p>
+                    <p>🌱 Sustainable</p>
+                    <div class="action-buttons">
+                        <button class="cart-btn" data-product="Foldable Shoe Rack" data-price="799">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product" data-filter="sustainable">
+                <div class="product-image" style="background-image: url('packaging6.jpg');"></div>
+                <div class="product-content">
+                    <h3>Velvet Jewelry Organizer</h3>
+                    <p>Protects and organizes jewelry collections.</p>
+                    <p><span style="color: red;">-22%</span> ₹499 <del>₹639</del></p>
+                    <p>🌱 Sustainable</p>
+                    <div class="action-buttons">
+                        <button class="cart-btn" data-product="Velvet Jewelry Organizer" data-price="499">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product" data-filter="reusable">
+                <div class="product-image" style="background-image: url('packaging7.jpg');"></div>
+                <div class="product-content">
+                    <h3>Waterproof Travel Pouches</h3>
+                    <p>Organizes toiletries or electronics.</p>
+                    <p><span style="color: red;">-20%</span> ₹399 <del>₹499</del></p>
+                    <p>🌱 Reusable</p>
+                    <div class="action-buttons">
+                        <button class="cart-btn" data-product="Waterproof Travel Pouches" data-price="399">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="see-more">See More</a>
+    </div>
+
+  <footer>
+    <div class="footer_panel1">
+      <a href="#top" style="color:antiquewhite">Back to Top</a>
+    </div>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Shop</h3>
+        <ul>
+          <li><a href="stationery.html">Desk Smarts</a></li>
+          <li><a href="household.html">Smarter Living</a></li>
+          <li><a href="handicrafts.html">Rural Decors</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Support</h3>
+        <ul>
+          <li><a href="contactus.html">Contact Us</a></li>
+          <li><a href="returns.html">Returns</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Community</h3>
+        <ul>
+          <li><a href="journal.html">SmartHome Journal</a></li>
+          <li><a href="sustainability.html">Sustainability</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Contact Us</h3>
+        <p>Email: <a href="mailto:support@novahaven.com">support@novahaven.com</a></p>
+        <p>Phone: +1 (555) 123-4567</p>
+      </div>
+    </div>
+    <div class="footer_panel2">
+      THANK YOU FOR SHOPPING WITH US.<br><br>
+      We can't wait to deliver happiness to your doorstep!<br><br>
+      © 2025 Nova Haven. All rights reserved
+    </div>
+  </footer>
+    <script src="script.js"></script>
+</body>
+</html>

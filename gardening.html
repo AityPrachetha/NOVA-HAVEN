@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Green Living - Nova Haven</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div id="logo">NOVA HAVEN</div>
+        <ul id="navbar">
+            <li><a href="index.html">HOME</a></li>
+            <li class="dropdown-toggle">SHOP
+                <div class="dropdown">
+                    <ul>
+                        <li><a href="stationery.html">STATIONERY & OFFICE SUPPLIES</a></li>
+                        <li><a href="household.html">HOUSEHOLD ITEMS</a></li>
+                        <li><a href="personalcare.html">PERSONAL CARE</a></li>
+                        <li><a href="packaging.html">PACKAGING & STORAGE</a></li>
+                        <li><a href="groceries.html">GROCERIES</a></li>
+                        <li><a href="clothing.html">CLOTHING & TEXTILES</a></li>
+                        <li><a href="gardening.html">GARDENING & FARMING</a></li>
+                        <li><a href="handicrafts.html">RURAL DECORS</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <form id="search-form" class="search-form">
+                    <input type="text" id="search-input" placeholder="Search products..." />
+                    <button type="submit" class="search-icon">🔍</button>
+                </form>
+                <div id="search-results" class="search-results"></div>
+            </li>
+            <li><a href="cart.html" class="cart-icon">🛒 <span id="cart-count">0</span></a></li>
+            <li><a href="login.html" id="login-link">LOGIN</a></li>
+            <li class="hamburger-toggle"><a href="#" class="hamburger-icon">☰</a>
+                <div class="hamburger-menu">
+                    <ul>
+                        <li><a href="clever-finds.html">CLEVER FINDS</a></li>
+                        <li><a href="sustainability.html">SUSTAINABILITY</a></li>
+                        <li><a href="about.html">ABOUT US</a></li>
+                        <li><a href="contactus.html">CONTACT US</a></li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </header>
+
+    <div id="buyrent-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">×</span>
+            <h2 id="modal-title">Complete Your Order</h2>
+            <form id="buyrent-form">
+                <div class="form-group">
+                    <label for="order-name">Name</label>
+                    <input type="text" id="order-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="order-email">Email</label>
+                    <input type="email" id="order-email" required>
+                </div>
+                <div class="form-group">
+                    <label for="order-phone">Phone</label>
+                    <input type="tel" id="order-phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="order-address">Address</label>
+                    <textarea id="order-address" required></textarea>
+                </div>
+                <p id="order-error" class="error"></p>
+                <button type="submit">Submit Order</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="section1" class="row-section">
+        <h2>Green Living</h2>
+        <p>Eco-friendly tools for gardening enthusiasts.</p>
+        <div class="product-grid">
+            <div class="product">
+                <div class="product-image" style="background-image: url('gardening1.jpg');"></div>
+                <div class="product-content">
+                    <h3>Self-Watering Planter</h3>
+                    <p>Low-maintenance watering for indoor plants.</p>
+                    <p><span style="color: red;">-25%</span> ₹699 <del>₹929</del></p>
+                    <p>🌱 Sustainable</p>
+                    <div class="action-buttons">
+                        <button class="cart-btn" data-product="Self-Watering Planter" data-price="699">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product">
+                <div class="product-image" style="background-image: url('gardening2.jpg');"></div>
+                <div class="product-content">
+                    <h3>Organic Gardening Kit</h3>
+                    <p>Complete set with seeds, tools, and compost.</p>
+                    <p><span style="color: red;">-20%</span> ₹999 <del>₹1249</del></p>
+                    <p>🌱 Sustainable</p>
+                    <div class="action-buttons">
+                        <button class="cart-btn" data-product="Organic Gardening Kit" data-price="999">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product">
+                <div class="product-image" style="background-image: url('gardening3.jpg');"></div>
+                <div class="product-content">
+                    <h3>Stainless Steel Watering Can</h3>
+                    <p>Durable, rust-resistant for precise watering.</p>
+                    <p><span style="color: red;">-22%</span> ₹599 <del>₹769</del></p>
+                    <p>🌱 Sustainable</p>
+                    <div class="action-buttons">
+                        <button class="cart-btn" data-product="Stainless Steel Watering Can" data-price="599">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product">
+                <div class="product-image" style="background-image: url('gardening4.jpg');"></div>
+                <div class="product-content">
+                    <h3>Ergonomic Garden Tool Set</h3>
+                    <p>Comfortable grip for digging and planting.</p>
+                    <p><span style="color: red;">-20%</span> ₹799 <del>₹999</del></p>
+                    <p>🌱 Sustainable</p>
+                    <div class="action-buttons">
+                        <button class="cart-btn" data-product="Ergonomic Garden Tool Set" data-price="799">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product">
+                <div class="product-image" style="background-image: url('gardening5.jpg');"></div>
+                <div class="product-content">
+                    <h3>Countertop Compost Bin</h3>
+                    <p>Odor-free composting for kitchen scraps.</p>
+                    <p><span style="color: red;">-25%</span> ₹499 <del>₹665</del></p>
+                    <p>🌱 Sustainable</p>
+                    <div class="action-buttons">
+                        <button class="cart-btn" data-product="Countertop Compost Bin" data-price="499">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product">
+                <div class="product-image" style="background-image: url('gardening6.jpg');"></div>
+                <div class="product-content">
+                    <h3>Bamboo Plant Labels</h3>
+                    <p>Eco-friendly markers for organizing plants.</p>
+                    <p><span style="color: red;">-20%</span> ₹199 <del>₹249</del></p>
+                    <p>🌱 Sustainable</p>
+                    <div class="action-buttons">
+                        <button class="cart-btn" data-product="Bamboo Plant Labels" data-price="199">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product">
+                <div class="product-image" style="background-image: url('gardening7.jpg');"></div>
+                <div class="product-content">
+                    <h3>Glass Sprouting Jar</h3>
+                    <p>Easy sprouting for fresh, homegrown greens.</p>
+                    <p><span style="color: red;">-22%</span> ₹399 <del>₹512</del></p>
+                    <p>🌱 Sustainable</p>
+                    <div class="action-buttons">
+                        <button class="cart-btn" data-product="Glass Sprouting Jar" data-price="399">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="see-more">See More</a>
+    </div>
+
+  <footer>
+    <div class="footer_panel1">
+      <a href="#top" style="color:antiquewhite">Back to Top</a>
+    </div>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Shop</h3>
+        <ul>
+          <li><a href="stationery.html">Desk Smarts</a></li>
+          <li><a href="household.html">Smarter Living</a></li>
+          <li><a href="handicrafts.html">Rural Decors</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Support</h3>
+        <ul>
+          <li><a href="contactus.html">Contact Us</a></li>
+          <li><a href="returns.html">Returns</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Community</h3>
+        <ul>
+          <li><a href="journal.html">SmartHome Journal</a></li>
+          <li><a href="sustainability.html">Sustainability</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Contact Us</h3>
+        <p>Email: <a href="mailto:support@novahaven.com">support@novahaven.com</a></p>
+        <p>Phone: +1 (555) 123-4567</p>
+      </div>
+    </div>
+    <div class="footer_panel2">
+      THANK YOU FOR SHOPPING WITH US.<br><br>
+      We can't wait to deliver happiness to your doorstep!<br><br>
+      © 2025 Nova Haven. All rights reserved
+    </div>
+  </footer>
+  
+    <script src="script.js"></script>
+</body>
+</html>

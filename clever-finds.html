@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clever Finds for the Week - Nova Haven</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="canonical" href="https://novahaven.com/clever-finds.html">
+</head>
+<body>
+   <header>
+        <div id="logo">NOVA HAVEN</div>
+        <ul id="navbar">
+            <li><a href="index.html">HOME</a></li>
+            <li class="dropdown-toggle">SHOP
+                <div class="dropdown">
+                    <ul>
+                        <li><a href="stationery.html">STATIONERY & OFFICE SUPPLIES</a></li>
+                        <li><a href="household.html">HOUSEHOLD ITEMS</a></li>
+                        <li><a href="personalcare.html">PERSONAL CARE</a></li>
+                        <li><a href="packaging.html">PACKAGING & STORAGE</a></li>
+                        <li><a href="groceries.html">GROCERIES</a></li>
+                        <li><a href="clothing.html">CLOTHING & TEXTILES</a></li>
+                        <li><a href="gardening.html">GARDENING & FARMING</a></li>
+                        <li><a href="handicrafts.html">RURAL DECORS</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <form id="search-form" class="search-form">
+                    <input type="text" id="search-input" placeholder="Search products..." />
+                    <button type="submit" class="search-icon">🔍</button>
+                </form>
+                <div id="search-results" class="search-results"></div>
+            </li>
+            <li><a href="cart.html" class="cart-icon">🛒 <span id="cart-count">0</span></a></li>
+            <li><a href="login.html" id="login-link">LOGIN</a></li>
+            <li class="hamburger-toggle"><a href="#" class="hamburger-icon">☰</a>
+                <div class="hamburger-menu">
+                    <ul>
+                        <li><a href="clever-finds.html">CLEVER FINDS</a></li>
+                        <li><a href="sustainability.html">SUSTAINABILITY</a></li>
+                        <li><a href="about.html">ABOUT US</a></li>
+                        <li><a href="contactus.html">CONTACT US</a></li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </header>
+
+    <div id="section1" class="row-section">
+        <h2>Clever Finds for the Week</h2>
+        <p>Discover our handpicked products of the week, designed to save you time and add a clever twist to your daily routine!</p>
+        
+        <div class="product-grid">
+            <div class="product">
+                <div class="product-image" style="background-image: url('magnetic-desk-organizer.jpg');"></div>
+                <div class="product-content">
+                    <h3>Modular Magnetic Desk Organizer</h3>
+                    <p>Organize pens, sticky notes, and cables in one compact unit. Stick it to your fridge or desk for instant access.</p>
+                    <p><span style="color: red;">-35%</span> ₹599 <del>₹925</del></p>
+                    <p>🌱 Made from recycled plastic</p>
+                    <div class="action-buttons">
+                        <button class="cart-btn" data-product="Modular Magnetic Desk Organizer" data-price="599">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product">
+                <div class="product-image" style="background-image: url('silicone-food-covers.jpg');"></div>
+                <div class="product-content">
+                    <h3>Stretchable Silicone Food Covers (Set of 6)</h3>
+                    <p>Cover bowls, jars, or fruits with stretchable, airtight seals. Dishwasher-safe for easy cleaning.</p>
+                    <p><span style="color: red;">-33%</span> ₹799 <del>₹1,200</del></p>
+                    <p>🌱 Food-grade silicone, BPA-free</p>
+                    <div class="action-buttons">
+                        <button class="cart-btn" data-product="Stretchable Silicone Food Covers" data-price="799">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product">
+                <div class="product-image" style="background-image: url('bamboo-laptop-stand.jpg');"></div>
+                <div class="product-content">
+                    <h3>Adjustable Bamboo Laptop Stand</h3>
+                    <p>Adjustable angles for laptops or tablets, with a built-in phone holder. Foldable for easy storage.</p>
+                    <p><span style="color: red;">-35%</span> ₹1,299 <del>₹1,999</del></p>
+                    <p>🌱 Sustainably sourced bamboo</p>
+                    <div class="action-buttons">
+                        <button class="cart-btn" data-product="Adjustable Bamboo Laptop Stand" data-price="1299">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product">
+                <div class="product-image" style="background-image: url('collapsible-travel-mug.jpg');"></div>
+                <div class="product-content">
+                    <h3>Collapsible Silicone Travel Mug (350ml)</h3>
+                    <p>Perfect for coffee or tea lovers; fits in small bags or pockets when collapsed. Leak-proof lid for mess-free travel.</p>
+                    <p><span style="color: red;">-33%</span> ₹499 <del>₹750</del></p>
+                    <p>🌱 Food-grade silicone, BPA-free</p>
+                    <div class="action-buttons">
+                        <button class="cart-btn" data-product="Collapsible Silicone Travel Mug" data-price="499">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product">
+                <div class="product-image" style="background-image: url('multi-tool-pen.jpg');"></div>
+                <div class="product-content">
+                    <h3>6-in-1 Multi-Tool Pen</h3>
+                    <p>Features a ballpoint pen, stylus, ruler, level, screwdriver, and bottle opener. Ideal for DIY enthusiasts and students.</p>
+                    <p><span style="color: red;">-33%</span> ₹399 <del>₹600</del></p>
+                    <p>🌱 Made from recycled aluminum</p>
+                    <div class="action-buttons">
+                        <button class="cart-btn" data-product="6-in-1 Multi-Tool Pen" data-price="399">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product">
+                <div class="product-image" style="background-image: url('cleaning-tablets.jpg');"></div>
+                <div class="product-content">
+                    <h3>Dissolvable Cleaning Tablets (Pack of 10)</h3>
+                    <p>Drop a tablet in a reusable bottle with water to create a powerful all-purpose cleaner. Safe for kitchens and bathrooms.</p>
+                    <p><span style="color: red;">-30%</span> ₹349 <del>₹500</del></p>
+                    <p>🌱 Biodegradable and non-toxic</p>
+                    <div class="action-buttons">
+                        <button class="cart-btn" data-product="Dissolvable Cleaning Tablets" data-price="349">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="see-more">See More</a>
+    </div>
+
+    <footer>
+        <div class="footer_panel1">
+            <a href="#top">Back to Top</a>
+        </div>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Shop</h3>
+                <ul>
+                    <li><a href="stationery.html">Desk Smarts</a></li>
+                    <li><a href="household.html">Smarter Living</a></li>
+                    <li><a href="handicrafts.html">Rural Decors</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Support</h3>
+                <ul>
+                    <li><a href="contactus.html">Contact Us</a></li>
+                    <li><a href="returns.html">Returns</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Community</h3>
+                <ul>
+                    <li><a href="journal.html">SmartHome Journal</a></li>
+                    <li><a href="sustainability.html">Sustainability</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>Email: <a href="mailto:support@novahaven.com">support@novahaven.com</a></p>
+                <p>Phone: +1 (555) 123-4567</p>
+            </div>
+        </div>
+        <div class="footer_panel2">
+            THANK YOU FOR SHOPPING WITH US.<br><br>
+            We can't wait to deliver happiness to your doorstep!<br><br>
+            © 2025 Nova Haven. All rights reserved
+        </div>
+    </footer>
+    <script src="cart-search.js"></script>
+</body>
+</html>
