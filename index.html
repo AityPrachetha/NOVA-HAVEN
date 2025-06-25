@@ -1,313 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nova Haven</title>
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Poppins:wght@700&display=swap" rel="stylesheet">
-
-  <style>
-    .shop-section {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-      margin-bottom: 40px;
-    }
-    .shop-box {
-      width: 250px;
-      text-align: center;
-    }
-    .box-img {
-      width: 100%;
-      height: 200px;
-      background-size: cover;
-      background-position: center;
-      border-radius: 10px;
-    }
-    .see-more {
-      display: inline-block;
-      margin-top: 10px;
-      color: #374151;
-      text-decoration: none;
-      font-weight: 600;
-    }
-    .see-more:hover {
-      text-decoration: underline;
-    }
-    .content-grid {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-    }
-    .feature-box {
-      width: 200px;
-      text-align: center;
-    }
-    .feature-img {
-      width: 100%;
-      height: 150px;
-      background-size: cover;
-      background-position: center;
-      border-radius: 10px;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartHome Journal - Nova Haven</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Header Section -->
-  <header>
-    <div id="logo">NOVA HAVEN</div>
-    <ul id="navbar">
-      <li><a href="index.html">HOME</a></li>
-      <li class="dropdown-toggle">SHOP
-        <div class="dropdown">
-          <ul>
-            <li><a href="stationery.html">STATIONERY & OFFICE SUPPLIES</a></li>
-            <li><a href="household.html">HOUSEHOLD ITEMS</a></li>
-            <li><a href="personalcare.html">PERSONAL CARE</a></li>
-            <li><a href="packaging.html">PACKAGING & STORAGE</a></li>
-            <li><a href="groceries.html">GROCERIES</a></li>
-            <li><a href="clothing.html">CLOTHING & TEXTILES</a></li>
-            <li><a href="gardening.html">GARDENING & FARMING</a></li>
-            <li><a href="handicrafts.html">RURAL DECORS</a></li>
-          </ul>
-        </div>
-      </li>
-      <li>
-        <form id="search-form" class="search-form">
-          <input type="text" id="search-input" placeholder="Search products..." aria-label="Search products">
-          <button type="submit" class="search-icon" aria-label="Search">🔍</button>
+    <header>
+        <div id="logo">NOVA HAVEN</div>
+        <ul id="navbar">
+            <li><a href="/index.html">HOME</a></li>
+            <li class="dropdown-toggle">SHOP
+                <div class="dropdown">
+                    <ul>
+                        <li><a href="/stationery.html">STATIONERY & OFFICE SUPPLIES</a></li>
+                        <li><a href="/household.html">HOUSEHOLD ITEMS</a></li>
+                        <li><a href="/personalcare.html">PERSONAL CARE</a></li>
+                        <li><a href="/packaging.html">PACKAGING & STORAGE</a></li>
+                        <li><a href="/groceries.html">GROCERIES</a></li>
+                        <li><a href="/clothing.html">CLOTHING & TEXTILES</a></li>
+                        <li><a href="/gardening.html">GARDENING & FARMING</a></li>
+                        <li><a href="/handicrafts.html">RURAL DECORS</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <form id="search-form" class="search-form">
+                    <input type="text" id="search-input" placeholder="Search products..." aria-label="Search products">
+                    <button type="submit" class="search-icon" aria-label="Search">🔍</button>
+                </form>
+                <div id="search-results" class="search-results"></div>
+            </li>
+            <li><a href="/cart.html" class="cart-icon">🛒 <span id="cart-count">0</span></a></li>
+            <li><a href="/login.html" id="login-link">LOGIN</a></li>
+            <li class="hamburger-toggle">
+                <a href="#" class="hamburger-icon" aria-label="Menu">☰</a>
+                <div class="hamburger-menu">
+                    <ul>
+                        <li><a href="/clever-finds.html">CLEVER FINDS</a></li>
+                        <li><a href="/sustainability.html">SUSTAINABILITY</a></li>
+                        <li><a href="/video-section.html">TIME-SAVERS</a></li>
+                        <li><a href="/about.html">ABOUT US</a></li>
+                        <li><a href="/contactus.html">CONTACT US</a></li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </header>
+
+    <div id="section1">
+        <h2>SmartHome Journal</h2>
+        <p>Share and discuss your experiences with Nova Haven products!</p>
+        <form id="post-form" class="journal-form">
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" placeholder="Enter your username" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Your Comment</label>
+                <textarea id="message" placeholder="Share your thoughts" required></textarea>
+            </div>
+            <p class="error" id="post-error"></p>
+            <button type="submit">Post Comment</button>
         </form>
-        <div id="search-results" class="search-results"></div>
-      </li>
-      <li><a href="cart.html" class="cart-icon">🛒 <span id="cart-count">0</span></a></li>
-      <li><a href="login.html" id="login-link">LOGIN</a></li>
-      <li class="hamburger-toggle">
-        <a href="#" class="hamburger-icon" aria-label="Menu">☰</a>
-        <div class="hamburger-menu">
-          <ul>
-            <li><a href="clever-finds.html">CLEVER FINDS</a></li>
-            <li><a href="sustainability.html">SUSTAINABILITY</a></li>
-            <li><a href="about.html">ABOUT US</a></li>
-            <li><a href="contactus.html">CONTACT US</a></li>
-          </ul>
-        </div>
-      </li>
-    </ul>
-  </header>
-
-  <!-- Main Content -->
-  <main>
-    <section id="hero">
-      <div class="banner-content">
-        <h1>Welcome to Nova Haven</h1>
-        <p>Discover innovative, sustainable products for a smarter lifestyle.</p>
-        <a href="#shop-sections" class="cta-button">Shop Now</a>
-      </div>
-    </section>
-
-    <!-- Shop Sections -->
-    <section id="shop-sections">
-      <h1 style="text-align: center; font-size: 36px; font-weight: 700; margin-bottom: 40px; color: #374151; font-family: 'Poppins', sans-serif;">Shop now</h1>
-      <div class="shop-section">
-        <div class="shop-box">
-          <div class="content">
-            STATIONERY & OFFICE SUPPLIES<br><br>
-            <a href="stationery.html"><div class="box-img" style="background-image: url('https://images.unsplash.com/photo-1455390582262-044cdead277a?fit=crop&w=250&h=200');" aria-label="Stationery products"></div></a>
-            <a href="stationery.html" class="see-more">see more</a>
-          </div>
-        </div>
-        <div class="shop-box">
-          <div class="content">
-            HOUSEHOLD ITEMS<br><br>
-            <a href="household.html"><div class="box-img" style="background-image: url('https://images.travelandleisureasia.com/wp-content/uploads/sites/3/2023/02/22144005/home-decor-markets-in-india-4.jpeg');" aria-label="Household products"></div></a>
-            <a href="household.html" class="see-more">see more</a>
-          </div>
-        </div>
-        <div class="shop-box">
-          <div class="content">
-            PERSONAL CARE<br><br>
-            <a href="personalcare.html"><div class="box-img" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT025VX0oMU9-Jrf38ow3FzeVhWGnSySRf1rg&s');" aria-label="Personal care products"></div></a>
-            <a href="personalcare.html" class="see-more">see more</a>
-          </div>
-        </div>
-        <div class="shop-box">
-          <div class="content">
-            PACKAGING & STORAGE<br><br>
-            <a href="packaging.html"><div class="box-img" style="background-image: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?fit=crop&w=250&h=200');" aria-label="Packaging products"></div></a>
-            <a href="packaging.html" class="see-more">see more</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="shop-section">
-        <div class="shop-box">
-          <div class="content">
-            GROCERIES<br><br>
-            <a href="groceries.html"><div class="box-img" style="background-image: url('https://hips.hearstapps.com/hmg-prod/images/healthy-groceries-bag-66eaef810acf6.jpg');" aria-label="Groceries"></div></a>
-            <a href="groceries.html" class="see-more">see more</a>
-          </div>
-        </div>
-        <div class="shop-box">
-          <div class="content">
-            CLOTHING & TEXTILES<br><br>
-            <a href="clothing.html"><div class="box-img" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvjg3Nqp2zrzFuOnO68ny7do4tqTiA980xYQ&s');" aria-label="Clothing products"></div></a>
-            <a href="clothing.html" class="see-more">see more</a>
-          </div>
-        </div>
-        <div class="shop-box">
-          <div class="content">
-            GARDENING & FARMING<br><br>
-            <a href="gardening.html"><div class="box-img" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSi7V8G5cEcf0HonyDCdGTrDFKVMIxKsjTVEQ&s');" aria-label="Gardening products"></div></a>
-            <a href="gardening.html" class="see-more">see more</a>
-          </div>
-        </div>
-        <div class="shop-box">
-          <div class="content">
-            RURAL DECORS<br><br>
-            <a href="handicrafts.html"><div class="box-img" style="background-image: url('https://d2ma7w4w9grdob.cloudfront.net/media/51352Mesmerizing-Rural-Area-Brass-Decor-Piece-For-Your-Home-SNP-2370-(1).JPG');" aria-label="Rural decor products"></div></a>
-            <a href="handicrafts.html" class="see-more">see more</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Featured Products -->
-    <section id="featured-products" class="content-section">
-      <h2>Featured Products</h2>
-      <div class="content-grid">
-        <div class="feature-box">
-          <div class="feature-img" style="background-image: url('https://www.rescript.in/assets/uploads/inventory/pro_63d8c1276b5628531.jpg');" aria-label="Eco-Friendly Notebook"></div>
-          <h3>Eco-Friendly Notebook</h3>
-          <p>Sustainable stationery for your daily needs.</p>
-          <button class="cart-btn" data-product="Eco-Friendly Notebook" data-price="299">Add to Cart</button>
-        </div>
-        <div class="feature-box">
-          <div class="feature-img" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvBR9GFion3LHBELPHxE80xsOVvozPQqEadg&s');" aria-label="Reusable Storage Bags"></div>
-          <h3>Reusable Storage Bags</h3>
-          <p>Organize your space with eco-conscious solutions.</p>
-          <button class="cart-btn" data-product="Reusable Storage Bags" data-price="499">Add to Cart</button>
-        </div>
-        <div class="feature-box">
-          <div class="feature-img" style="background-image: url('https://m.media-amazon.com/images/I/41XmKFdPkoL.AC_UF894,1000_QL80.jpg');" aria-label="Organic Cotton Tote"></div>
-          <h3>Organic Cotton Tote</h3>
-          <p>Style meets sustainability.</p>
-          <button class="cart-btn" data-product="Organic Cotton Tote" data-price="399">Add to Cart</button>
-        </div>
-        <div class="feature-box">
-          <div class="feature-img" style="background-image: url('https://www.bombaygreens.com/cdn/shop/files/04_2ff2f398-239f-4777-a83d-9c6ab789a854_1500x.jpg?v=1679991909');" aria-label="Gardening Kit"></div>
-          <h3>Gardening Kit</h3>
-          <p>Grow your own food with ease.</p>
-          <button class="cart-btn" data-product="Gardening Kit" data-price="799">Add to Cart</button>
-        </div>
-      </div>
-    </section>
-
-    <!-- Why Choose Us -->
-    <section id="why-choose-us" class="content-section light-bg">
-      <h2>Why Choose Nova Haven?</h2>
-      <div class="content-grid">
-        <div class="why-box">
-          <h3>Sustainability</h3>
-          <p>Our products are eco-friendly and biodegradable.</p>
-        </div>
-        <div class="why-box">
-          <h3>Quality</h3>
-          <p>High-quality materials for lasting use.</p>
-        </div>
-        <div class="why-box">
-          <h3>Community</h3>
-          <p>Join a community passionate about smarter living.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Testimonials -->
-    <section id="testimonials" class="content-section">
-      <h2>What Our Customers Say</h2>
-      <div class="content-grid">
-        <div class="testimonial-box">
-          <p>"Nova Haven's products transformed my home organization!"</p>
-          <h4>– Sarah K.</h4>
-        </div>
-        <div class="testimonial-box">
-          <p>"Love the eco-friendly options. Great quality!"</p>
-          <h4>– Michael T.</h4>
-        </div>d
-        <div class="testimonial-box">
-          <p>"The gardening kit made planting so easy."</p>
-          <h4>– Priya R.</h4>
-        </div>
-      </div>
-    </section>
-
-    <!-- Community Section -->
-    <section id="community-section" class="content-section light-bg">
-      <h2>Join Our Community</h2>
-      <p class="section-description">Connect with us, share your experiences, and make a difference!</p>
-      <div class="content-grid">
-        <div class="community-box">
-          <h3>Your Impact</h3>
-          <p>Track your environmental savings with every purchase.</p>
-          <a href="impact-tracker.html" class="cta-button">See Your Impact</a>
-        </div>
-        <div class="community-box">
-          <h3>Feedback</h3>
-          <p>Let us know how we can improve your experience.</p>
-          <a href="feedback.html" class="cta-button">Share Feedback</a>
-        </div>
-        <div class="community-box">
-          <h3>Returns</h3>
-          <p>Return biodegradable products easily.</p>
-          <a href="returns.html" class="cta-button">Start a Return</a>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <!-- Footer Section -->
-  <footer>
-    <div class="footer_panel1">
-      <a href="#top">Back to Top</a>
+        <div id="posts" class="journal-posts"></div>
     </div>
-    <div class="footer-content">
-      <div class="footer-section">
-        <h3>Shop</h3>
-        <ul>
-          <li><a href="stationery.html">Desk Smarts</a></li>
-          <li><a href="household.html">Smarter Living</a></li>
-          <li><a href="handicrafts.html">Rural Decors</a></li>
-        </ul>
-      </div>
-      <div class="footer-section">
-        <h3>Support</h3>
-        <ul>
-          <li><a href="contactus.html">Contact Us</a></li>
-          <li><a href="returns.html">Returns</a></li>
-        </ul>
-      </div>
-      <div class="footer-section">
-        <h3>Community</h3>
-        <ul>
-          <li><a href="journal.html">SmartHome Journal</a></li>
-          <li><a href="sustainability.html">Sustainability</a></li>
-        </ul>
-      </div>
-      <div class="footer-section">
-        <h3>Contact Us</h3>
-        <p>Email: <a href="mailto:support@novahaven.com">support@novahaven.com</a></p>
-        <p>Phone: +1 (555) 123-4567</p>
-      </div>
-    </div>
-    <div class="footer_panel2">
-      THANK YOU FOR SHOPPING WITH US.<br><br>
-      We can't wait to deliver happiness to your doorstep!<br><br>
-      © 2025 Nova Haven. All rights reserved
-    </div>
-  </footer>
 
-  <script src="cart-search.js"></script>
+    <footer>
+        <div class="footer_panel1">
+            <a href="#top">Back to Top</a>
+        </div>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Shop</h3>
+                <ul>
+                    <li><a href="/stationery.html">Desk Smarts</a></li>
+                    <li><a href="/household.html">Smarter Living</a></li>
+                    <li><a href="/handicrafts.html">Rural Decors</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Support</h3>
+                <ul>
+                    <li><a href="/contactus.html">Contact Us</a></li>
+                    <li><a href="/returns.html">Returns</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Community</h3>
+                <ul>
+                    <li><a href="/community/index.html">SmartHome Journal</a></li>
+                    <li><a href="/sustainability.html">Sustainability</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>Email: <a href="mailto:support@novahaven.com">support@novahaven.com</a></p>
+                <p>Phone: +1 (555) 123-4567</p>
+            </div>
+        </div>
+        <div class="footer_panel2">
+            THANK YOU FOR SHOPPING WITH US.<br><br>
+            We can't wait to deliver happiness to your doorstep!<br><br>
+            © 2025 Nova Haven. All rights reserved
+        </div>
+    </footer>
+    <script src="script.js"></script>
 </body>
 </html>
